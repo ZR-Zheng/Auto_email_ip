@@ -7,7 +7,6 @@ This project automatically checks the public IP address (both IPv4 and IPv6) of 
 - Check public IPv4 and IPv6 addresses from multiple sources.
 - Send email notifications when the IP address changes.
 - Log IP address changes and errors.
-- Clear log file every 24 hours.
 
 ## Requirements
 
@@ -21,11 +20,8 @@ This project automatically checks the public IP address (both IPv4 and IPv6) of 
     cd auto-public-net
     ```
 
-2. Configure the email settings in 
+2. Configure the email settings in auto_email_ip.py:
 
-auto_email_ip.py
-
-:
     ```python
     host = 'smtp.***.com'
     port = 465
@@ -41,11 +37,8 @@ auto_email_ip.py
 
 ## Logging
 
-The script logs messages to 
-
-auto_email_ip.log
-
-. The log file is cleared every 24 hours.
+The script logs messages to auto_email_ip.log. 
+The log file is cleared every 24 hours.
 
 ## Acknowledgements
 
@@ -54,5 +47,3 @@ This project is based on the original repository: [auto-public-net](https://gith
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
-
-Similar code found with 1 license type
