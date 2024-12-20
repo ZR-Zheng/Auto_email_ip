@@ -135,9 +135,9 @@ def checkIP():
         nowtime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         textList.insert(0, nowtime)
         textList.insert(1, 'IP: ' + sendIPAddress)
-        jellyfin = 'Jellyfin: ' + 'http://'+ sendIPAddress + ':8096/web/index.html'
+        jellyfin = 'Jellyfin: ' + 'http://['+ sendIPAddress + ']:8096/web/index.html'
         textList.insert(2, jellyfin)
-        Alist = 'Alist: ''http://' + sendIPAddress + ':5244'
+        Alist = 'Alist: ''http://[' + sendIPAddress + ']:5244'
         textList.insert(3, Alist)
         content = '\n'.join(textList)
         sendIP(content)
@@ -165,9 +165,9 @@ if __name__ == "__main__":
     # sendIPAddress = getIP() #获取ipv4
     sendIPAddress = getipv6() #获取ipv6
     textList.insert(1, 'IP: ' + sendIPAddress)
-    jellyfin = 'Jellyfin: ' + 'http://'+ sendIPAddress + ':8096/web/index.html'
+    jellyfin = 'Jellyfin: ' + 'http://['+ sendIPAddress + ']:8096/web/index.html'
     textList.insert(2, jellyfin)
-    Alist = 'Alist: ''http://' + sendIPAddress + ':5244'
+    Alist = 'Alist: ''http://[' + sendIPAddress + ']:5244'
     textList.insert(3, Alist)
     # 可以添加更多的便捷链接
     content = '\n'.join(textList)
